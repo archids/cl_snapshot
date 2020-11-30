@@ -79,7 +79,7 @@ def local_event(lock):
 def bcast_message(lock):
     with lock:
         name = "Message Broadcast"
-        # Update the current state, increment by 1
+    # Broadcast message out to all outgoing
     handle_outgoing(name)
 
 
@@ -167,7 +167,7 @@ def handle_incoming():
         except:
             print(f"[{LOCAL_ID}] Error accepting connection")
 
-    for connection in incoming_connections:
+    for connection in incoming_threads:
         connection.join()
 
     incoming_conn.close()
@@ -217,7 +217,7 @@ def process_data(client_socket, address, received_data):
                 print(
                     f"[{LOCAL_ID}] Received a \033[36m{received_data[0]['header']}\033[00m from {CLIENT_LIST[address[0]]['Name']}")
 
-                received_snapshots = received_data[2]
+                #received_snapshots = received_data[2]
                 print(f"[{LOCAL_ID}] Taking local snapshot")
                 global_snapshot[LOCAL_ID] = "Yes"
                 saved_snapshots.append({"Snapshot": current_state,
