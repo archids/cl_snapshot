@@ -1,6 +1,6 @@
 ### Distributed Systems Lab 04, 2020 - Chandy Lamport Algorithm ###
 ### Snapshot Script ###
-### By Hids Samsudeen ###
+### by arc.hids ###
 
 import socket
 import threading
