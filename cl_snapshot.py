@@ -1,4 +1,4 @@
-### Distributed Systems Lab 04, 2020 - Chandy Lamport Algorithm ###
+### Distributed Systems Lab 02, 2020 - Chandy Lamport Algorithm ###
 ### Snapshot Script ###
 ### by arc.hids ###
 
